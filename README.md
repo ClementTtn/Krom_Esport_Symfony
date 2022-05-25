@@ -4,13 +4,13 @@
 <img src=KROM-Esport.png width = "250" height = "232">
 </p>
 
-Ce projet, réalisé dans le cadre d'un travail demandé au cours du 4ème semestre de mon cursus universitaire, est le site d'une association française.
+This project, carried out as part of a work requested during the 4th semester of my university course, is the site of a French association.
 
-Ce projet repose sur une première version d'un site créer pour cette même association, développé en MVC. Il s'agit donc de la V2 de ce site en utilisant Symfony.
+This project is based on a first version of a site created for this same association, developed in MVC. So this is the V2 of this site using Symfony.
 
-Le site est accessible [ici](https://krom-esport.fr "Site KROM Esport").
+The site can be accessed [here](https://krom-esport.fr "Site KROM Esport").
 
-Les différents réseaux de l'association :
+The various networks of the association :
 - [Twitter](https://twitter.com/krom_esport "Twitter KROM Esport")
 - [Twitch](https://www.twitch.tv/krom_esport "Discord KROM Esport")
 - [Discord](https://discord.gg/4fFW5NP "Discord KROM Esport")
@@ -18,4 +18,4 @@ Les différents réseaux de l'association :
 
 
 
-Lien GitHub de la [V1](https://github.com/ClementTtn/Krom_Esport "GitHub KROM MVC").
+GitHub link of [V1](https://github.com/ClementTtn/Krom_Esport "GitHub KROM MVC").
