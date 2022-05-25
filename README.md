@@ -19,3 +19,9 @@ The various networks of the association :
 
 
 GitHub link of [V1](https://github.com/ClementTtn/Krom_Esport "GitHub KROM MVC").
+
+
+
+All the files that make up this website are the intellectual property of KROM Esport.
+
+Any use of this property is subject to authorization.
