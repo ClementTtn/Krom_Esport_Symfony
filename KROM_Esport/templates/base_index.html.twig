@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- Page HTML pour le header et le footer de la page index.html.twig -->
+
+<html lang="fr">
+    <head>
+        <!-- Lien d'authentification au Google Search Console -->
+        <meta name="google-site-verification" content="FjvUGRvMA60tpY_nqJM_nwDjndxwsuLj_mg_bzxnCHg" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}KROM Esport - Accueil {% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/logos/favicon.png') }}">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+        </style>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/mobile.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/ecranlarge.css') }}">
+        {% endblock %}
+
+        <!-- Balises meta pour le référencement et l'affichage des liens sur Twitter -->
+        <meta property="og:site_name" content="KROM Esport" />
+        <meta property="og:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+        <meta property="og:description" content="KROM Esport, équipe de Sim Racing depuis 2019." />
+        <meta name="description" content="KROM Esport, équipe de Sim Racing depuis 2019." />
+        <meta property="og:title" content="Bienvenue sur le site de KROM Esport" />
+
+        <meta name="twitter:title" content="KROM Esport" />
+        <meta name="twitter:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+        <meta name="twitter:description" content="KROM Esport, équipe de Sim Racing depuis 2019." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="robots" content="noarchive" />
+    </head>
+
+    <body>
+
+    <div class="background_header_index">
+        <div class="logo_krom_header_index">
+            <img src="{{ asset('img/logos/krom_logo.png') }}" alt="KROM Esport">
+        </div>
+
+        <div class="reseaux_header">
+            <a href="https://twitter.com/krom_esport" target="_blank">
+                <img src="{{ asset('img/reseaux/twitter.svg') }}" alt="twitter_krom" height="32" width="32">
+            </a>
+            <a href="https://www.twitch.tv/krom_esport" target="_blank">
+                <img src="{{ asset('img/reseaux/twitch.svg') }}" alt="twitch_krom" height="32" width="32">
+            </a>
+            <a href="https://discord.gg/4fFW5NP" target="_blank">
+                <img src="{{ asset('img/reseaux/discord.svg') }}" alt="discord_krom" height="32" width="32">
+            </a>
+            <a href="https://www.instagram.com/krom_esport/" target="_blank">
+                <img src="{{ asset('img/reseaux/instagram.svg') }}" alt="instagram_krom" height="32" width="32">
+            </a>
+        </div>
+
+
+        <div class="img_header">
+            <img class="img_header_pc" src="{{ asset('img/header/img_header.png') }}" alt="krom_header" height="1080" width="1920">
+            <img class="img_header_mobile" src="{{ asset('img/header/img_header_mobile.png') }}" alt="krom_header">
+        </div>
+
+
+        <header class="header_index">
+            <p><img id="ouverture_menu" src="{{ asset('img/logos/menu.svg') }}" alt="ouverture_menu"></p>
+
+            <h1 id="logo_krom_header_mobile">
+                <a href="#">
+                    <img id="logo_krom_header" src="{{ asset('img/header/krom_header.png') }}" alt="krom_header" height="53" width="360">
+                </a>
+            </h1>
+
+            <a href="{{ path('admin') }}"><img id="img_compte" src="{{ asset('img/logos/compte.svg') }}" alt="img_compte"></a>
+
+            <nav id="fermé" class="menu">
+                <h1 id="logo_krom_header_pc">
+                    <a href="#">
+                        <img id="logo_krom_header" src="{{ asset('img/header/krom_header.png') }}" alt="krom_header" height="53" width="360">
+                    </a>
+                </h1>
+
+                <ul>
+                    <li id="icone_fermeture"><img id="fermeture_menu" src="{{ asset('img/logos/close.svg') }}" alt="fermeture_menu"></li>
+                    <li><a href="{{ path('index') }}">Accueil</a></li>
+                    <li><a href="{{ path('actualites_index') }}">Actualités</a></li>
+                    <li><a href="{{ path('calendrier') }}">Calendrier</a></li>
+                    <li><a href="{{ path('equipe_index') }}">L'équipe</a></li>
+                    <li><a href="http://localhost:3000/galerie-photo">Galerie photo</a></li>
+                    <li><a href="{{ path('a_propos') }}">À propos</a></li>
+                    <li><a href="{{ path('rejoindre') }}">Nous rejoindre</a></li>
+                    <li id="nous_contacter"><a href="{{ path('contact') }}">Nous contacter</a></li>
+                    <a href="{{ path('admin') }}"><img id="img_compte_pc" src="{{ asset('img/logos/compte.svg') }}" alt="img_compte_pc"></a>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    {% block body %}
+    {% endblock %}
+    </body>
+
+    <a class="separation_footer"></a>
+
+    <footer>
+        <div class="footer_flex">
+            <div class="logos_footer">
+                <a href="#">
+                    <img class="logo_krom_footer" src="{{ asset('img/logos/krom_logo.png') }}" alt="logo_krom" loading="lazy">
+                </a>
+
+                <div class="reseaux_footer">
+                    <a href="https://twitter.com/krom_esport" target="_blank">
+                        <img class="logo_reseaux_footer" src="{{ asset('img/reseaux/twitter.svg') }}" alt="twitter_krom" loading="lazy">
+                    </a>
+
+                    <a href="https://www.twitch.tv/krom_esport" target="_blank">
+                        <img class="logo_reseaux_footer" src="{{ asset('img/reseaux/twitch.svg') }}" alt="twitch_krom" loading="lazy">
+                    </a>
+
+                    <a href="https://discord.gg/4fFW5NP" target="_blank">
+                        <img class="logo_reseaux_footer" src="{{ asset('img/reseaux/discord.svg') }}" alt="discord_krom" loading="lazy">
+                    </a>
+
+                    <a href="https://www.instagram.com/krom_esport/" target="_blank">
+                        <img class="logo_reseaux_footer" src="{{ asset('img/reseaux/instagram.svg') }}" alt="instagram_krom" loading="lazy">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Intégration timeline Twitter dans le footer -->
+            <div class="timeline_twitter">
+                <a class="twitter-timeline" data-lang="fr" data-width="300" data-height="300" data-theme="dark" href="https://twitter.com/Krom_esport?ref_src=twsrc%5Etfw">Tweets by Krom_esport</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+            <div class="links_footer">
+                <div class="redirection_footer">
+                    <h4><a href="{{ path('contact') }}">Nous contacter</a></h4>
+                    <h4><a href="{{ path('mentions_legales') }}">Mentions légales</a></h4>
+                    <h4><a href="{{ path('politique_confidentialite') }}">Politique de confidentialité</a></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="mentions_footer">
+            <p>Copyright © 2022 Krom Esport.</p>
+            <p>Tous droits réservés.</p>
+        </div>
+
+        <div class="realisation">
+            <p>Site réalisé par <a href="https://github.com/ClementTtn" target="_blank">Clément Tutin</a>.</p>
+        </div>
+
+    </footer>
+
+    {% block javascripts %}
+        <script src="{{ asset('js/main.js') }}"></script>
+        <script src="{{ asset('js/header.js') }}"></script>
+    {% endblock %}
+
+</html>

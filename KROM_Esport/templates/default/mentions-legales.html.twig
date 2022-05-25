@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KROM Esport - Mentions légales{% endblock %}
+
+{% block meta %}
+    <meta property="og:site_name" content="KROM Esport" />
+    <meta property="og:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta property="og:title" content="Mentions légales du site KROM Esport" />
+    <meta property="og:description" content="Veuillez prendre connaissance des mentions légales du site KROM Esport." />
+    <meta name="description" content="Veuillez prendre connaissance des mentions légales du site KROM Esport." />
+
+    <meta name="twitter:title" content="KROM Esport" />
+    <meta name="twitter:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta name="twitter:description" content="Veuillez prendre connaissance des mentions légales du site KROM Esport." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="noarchive" />
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML pour les mentions légales du site -->
+
+
+    <main>
+        <h2 class="h2_sous_nav_politique_confidentialite">Mentions légales</h2>
+
+        <p class="texte_mentions_legales">
+            Le site KROM Esport (ci-après "le Site"), accessible à l'adresse <a href="https://krom-esport.fr">https://krom-esport.fr</a> est édité par l'association KROM Esport, dont le siège social est situé au 38 route de Bayonne, 64230 Poey-de-Lescar, France.
+        </p>
+
+        <h3 class="sous_titre">Rédaction du site internet</h3>
+
+        <p class="texte_mentions_legales">
+            Responsable de la publication : <br> Clément Tutin
+            <br>
+            <br>
+            Contact : <br> clement.tutin@krom-esport.fr.
+        </p>
+
+        <h3 class="sous_titre">Hébergeur du site internet</h3>
+
+        <p class="texte_mentions_legales">
+            Le site KROM Esport est hébergé par HOSTINGER, dont le siège social est HOSTINGER INTRNATIONAL LTD, 61 Lordou Vironos Street, 6023 Larnaca, Chypre, joignable par le moyen suivant : <a href="https://www.hostinger.fr/contact" target="_blank" rel="nofollow">https://www.hostinger.fr/contact</a>
+        </p>
+
+        <h3 class="sous_titre">Respect de la propriété intellectuelle</h3>
+
+        <p class="texte_mentions_legales">
+            Toutes les marques, photographies, textes, commentaires, illustrations, images animées ou non, séquences vidéo, sons, ainsi que toutes les applications informatiques qui pourraient être utilisées pour faire fonctionner le Site et plus généralement tous les éléments reproduits ou utilisés sur le Site sont protégés par les lois en vigueur au titre de la propriété intellectuelle.
+            <br>
+            <br>
+            Ils sont la propriété pleine et entière de l’Editeur ou de ses partenaires, sauf mentions particulières. Toute reproduction, représentation, utilisation ou adaptation, sous quelque forme que ce soit, de tout ou partie de ces éléments, y compris les applications informatiques, sans l’accord préalable et écrit de l’Editeur, sont strictement interdites. Le fait pour l’Editeur de ne pas engager de procédure dès la prise de connaissance de ces utilisations non autorisées ne vaut pas acceptation desdites utilisations et renonciation aux poursuites.
+            <br>
+            <br>
+            Seule l’utilisation pour un usage privé dans un cercle de famille est autorisée et toute autre utilisation est constitutive de contrefaçon et/ou d’atteinte aux droits voisins, sanctionnées par Code de la propriété intellectuelle.
+            <br>
+            <br>
+            La reprise de tout ou partie de ce contenu nécessite l’autorisation préalable de l’Editeur ou du titulaire des droits sur ce contenu.
+        </p>
+
+        <h3 class="sous_titre">Liens hypertextes</h3>
+
+        <p class="texte_mentions_legales">
+            Le Site peut contenir des liens hypertexte donnant accès à d’autres sites web édités et gérés par des tiers et non par l’Editeur. L’Editeur ne pourra être tenu responsable directement ou indirectement dans le cas où lesdits sites tiers ne respecteraient pas les dispositions légales.
+        </p>
+
+        <h3 class="sous_titre">Contact</h3>
+
+        <p class="texte_mentions_legales">
+            Pour toute demande d'utilisation de la propriété intellectuelle de KROM Esport, veuillez nous contacter via ce <a href="{{ path('contact') }}">formulaire</a> ou à l'adresse suivante : contact@krom-esport.com
+        </p>
+    </main>
+{% endblock %}

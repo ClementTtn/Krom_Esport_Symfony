@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KROM Esport - Administration{% endblock %}
+
+{% block body %}
+    <!-- Page HTML pour le formulaire de login -->
+
+    <h2 class="h2_sous_nav_admin">Connexion à l'espace administrateur</h2>
+
+    <div class="formulaire_admin">
+
+        <div class="formulaire">
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                <!--
+                {% if app.user %}
+                    <div class="mb-3">
+                        Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
+                    </div>
+                {% endif %}
+                -->
+
+                <!--
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                -->
+                <label for="inputEmail">Identifiant</label>
+                <br>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="adresse.email@exemple.com" required autofocus>
+                <br>
+                <label for="inputPassword">Mot de passe</label>
+                <br>
+                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Mot de passe" required>
+
+                <!-- Logos pour afficher / cacher le mdp -->
+                <img src="{{ asset('/img/formulaire%20/eye.svg') }}" alt="eye" class="cache">
+                <img src="{{ asset('/img/formulaire%20/eye-off.svg') }}" alt="eye-off" class="visible" style="display: none">
+
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}"
+                >
+
+                <div class="remember_me">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Se souvenir de moi
+                    </label>
+                </div>
+
+
+                <p class="bouton">
+                    <button class="btn btn-lg btn-primary" type="submit">
+                        Se connecter
+                    </button>
+                </p>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/mdp.js') }}"></script>
+{% endblock %}

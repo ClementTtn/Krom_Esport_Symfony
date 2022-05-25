@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KROM Esport - Equipe{% endblock %}
+
+{% block meta %}
+    <meta property="og:site_name" content="KROM Esport" />
+    <meta property="og:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta property="og:title" content="L'équipe KROM Esport" />
+    <meta property="og:description" content="Jetez un oeil à la liste de nos pilotes." />
+    <meta name="description" content="Jetez un oeil à la liste de nos pilotes." />
+
+    <meta name="twitter:title" content="KROM Esport" />
+    <meta name="twitter:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta name="twitter:description" content="Jetez un oeil à la liste de nos pilotes." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="noarchive" />
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML qui affiche l'ensemble des membres de l'équipe  -->
+
+    <h2 class="h2_sous_nav">Nos pilotes</h2>
+
+    <div class="equipe_flex">
+
+        {% for e in equipe %}
+            <div class="collec_membres">
+                <a href="{{ path('afficherMembre', { "id" : e.id }) }}">
+                    <img src="/img/equipe/{{ asset(e.img) }}" alt="membre_KROM" loading="lazy">
+                </a>
+                <br>
+                <a class="nom_membres">{{ e.nom }}</a>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+    <h3 class="h3_actu">Suite prochainement...</h3>
+{% endblock %}

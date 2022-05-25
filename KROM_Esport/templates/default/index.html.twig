@@ -1,0 +1,69 @@
+{% extends 'base_index.html.twig' %}
+
+{% block body %}
+    <!-- Page HTML pour la page d'accueil du site -->
+
+    <div class="quelques_chiffres_global">
+        <h2>Quelques chiffres</h2>
+        <ul class="quelques_chiffres">
+            <li><a>Création en <a class="chiffres_couleur">octobre 2020</a></a></li>
+
+            <a class="barre_chiffres"></a>
+
+            <li><a><a class="chiffres_couleur">19</a> pilotes</a></li>
+
+            <a class="barre_chiffres"></a>
+
+            <li><a>Plus de <a class="chiffres_couleur">160</a> départs</a></li>
+
+            <a class="barre_chiffres"></a>
+
+            <li><a><a class="chiffres_couleur">15</a> victoires</a></li>
+
+            <a class="barre_chiffres"></a>
+
+            <li><a><a class="chiffres_couleur">37</a> podiums</a></li>
+
+            <a class="barre_chiffres"></a>
+
+            <li><a><a class="chiffres_couleur">107</a> top 10</a></li>
+
+            <a class="detail_chiffres">(en janvier 2022)</a>
+        </ul>
+
+        <a class="texte_chiffres">Et ce n'est que le début de notre longue histoire...</a>
+    </div>
+
+
+    <a class="separation_footer"></a>
+
+
+    <h2>Les derniers articles de Krom Esport</h2>
+
+    <!-- Boucle d'affichage d'un article -->
+    {% for a in actualites %}
+
+        <div class="collec_article_index">
+            <a class="titre_article">{{ a.titre }}</a>
+            <br>
+            <a href="{{ path('afficherArticle', { "id" : a.id }) }}">
+                <img src="/img/article/{{ asset(a.imgCouverture) }}" alt="article_KROM" width="716" height="403" loading="lazy">
+            </a>
+            <br>
+            <a class="article_extrait">{{ a.sousTitre }}</a>
+            <br>
+            <div class="redirection_vue_article">
+                <a href="{{ path('afficherArticle', { "id" : a.id }) }}">En savoir plus</a>
+            </div>
+            <br>
+            <a class="date_article_index">{{ a.dateParution|format_datetime(locale='fr',pattern="dd MMMM YYYY") }}</a>
+        </div>
+        
+    {% endfor %}
+
+
+
+    <div class="bouton_actu">
+        <a href="{{ path('actualites_index') }}">Toutes nos actualités</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KROM Esport - Rejoindre KROM{% endblock %}
+
+{% block body %}
+    <!-- Page HTML pour la confirmation d'envoi de la candidature -->
+
+    <main>
+        <h2 class="h2_sous_nav">Confirmation d'envoi de votre candidature</h2>
+        <p class="texte_contact">
+            Votre candidature nous a bien été envoyé.<br><br>
+            Vous allez recevoir une confirmation par email sur l'adresse renseignée. Ce sera sur celle-ci que nous vous recontacterons ultérieurement.
+        </p>
+
+        <div class="redirection_vue_article">
+            <a href="{{ path('index') }}">Accueil</a>
+        </div>
+
+    </main>
+{% endblock %}

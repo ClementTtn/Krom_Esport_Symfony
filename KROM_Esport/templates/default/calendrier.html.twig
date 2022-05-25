@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KROM Esport - Calendrier{% endblock %}
+
+{% block meta %}
+    <meta property="og:site_name" content="KROM Esport" />
+    <meta property="og:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta property="og:title" content="Le calendrier de KROM Esport" />
+    <meta property="og:description" content="Retrouvez nos prochains rendez-vous." />
+    <meta name="description" content="Retrouvez nos prochains rendez-vous." />
+
+    <meta name="twitter:title" content="KROM Esport" />
+    <meta name="twitter:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta name="twitter:description" content="Retrouvez nos prochains rendez-vous." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="noarchive" />
+{% endblock %}
+
+{% block body %}
+<!-- Page HTML pour afficher le calendrier -->
+
+<h2 class="h2_sous_nav">Nos prochains rendez-vous</h2>
+
+<div class="calendrier">
+
+    <!-- Boucle d'affichage d'une date -->
+    {% for c in calendrier %}
+        <div class="un_calendrier">
+            <div class="date_calendrier">
+                <!-- Utilisation de l'extension Twig "format_datetime" pour afficher la date au format français. -->
+                <a>{{ c.date|format_datetime(locale='fr',pattern="dd MMMM YYYY") }}  {{ c.heure }}</a>
+            </div>
+
+            <div class="intitule_calendrier">
+                <a href="{{ c.lien_evenement }}" target="_blank">{{ c.intitule }}</a>
+            </div>
+        </div>
+
+        <a class="separation_calendrier"></a>
+    {% endfor %}
+</div>
+
+<h3 class="h3_actu">La suite prochainement...</h3>
+{% endblock %}

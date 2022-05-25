@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KROM Esport - Contact{% endblock %}
+
+{% block body %}
+    <!-- Page HTML pour la confirmation d'envoi du message -->
+
+    <main>
+        <h2 class="h2_sous_nav">Confirmation d'envoi de votre message</h2>
+        <p class="texte_contact">
+            Votre message nous a bien été envoyé.<br><br>
+            Vous allez recevoir une confirmation par email sur l'adresse renseignée. Ce sera sur celle-ci que nous vous recontacterons ultérieurement si besoin.
+        </p>
+
+        <div class="redirection_vue_article">
+            <a href="{{ path('index') }}">Accueil</a>
+        </div>
+
+    </main>
+{% endblock %}

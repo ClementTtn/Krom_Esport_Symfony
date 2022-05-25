@@ -1,0 +1,471 @@
+@media all and (min-width: 1000px){
+
+    /*-----------------------Général-----------------------*/
+    html{
+        font-size: 50%;
+    }
+
+
+
+    /*------------------------Header------------------------*/
+    .background_header_index{
+        background-image: url("../img/header/img_header.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img_header_pc{
+        opacity: 0;
+        height: 80%;
+    }
+
+    .header_index{
+        display: flex;
+        justify-content: left;
+        background: rgba(0,0,0,0);
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        font-size: 0;
+        padding: 4rem 0;
+        height: 60px;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .header_index.scroll{
+        font-size: 0;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .header_global{
+        display: flex;
+        justify-content: left;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        font-size: 0;
+        padding: 4rem 0;
+        height: 60px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    header nav{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        padding: 4rem 0;
+    }
+
+    nav{
+        background-color: rgba(0,0,0,0);
+        opacity: 1;
+        top: 20px;
+        transition: none;
+    }
+
+    nav #logo_krom_header_pc{
+        margin-left: 7rem;
+    }
+
+    nav ul{
+        margin-right: 7rem;
+    }
+
+    nav ul li{
+        float: left;
+        border-bottom: none;
+        font-size: 200%;
+    }
+
+    nav ul li a{
+        font-size: 1.75rem;
+    }
+
+    .header_index h1{
+        opacity: 100%;
+        padding: 0;
+        font-size: 0;
+    }
+
+    #ouverture_menu{
+        display: none;
+    }
+
+    #icone_fermeture{
+        display: none;
+    }
+
+    #img_compte{
+        display: none;
+    }
+
+    #img_compte_pc{
+        width: 20px;
+        height: 20px;
+        filter: invert(1);
+        margin-top: 2.5rem;
+    }
+
+    #nous_contacter{
+        display: none;
+    }
+
+    .a_admin{
+        font-size: 50%;
+    }
+
+    .img_header img{
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #logo_krom_header_mobile{
+        display: none;
+    }
+
+    #logo_krom_header_pc{
+        display: flex;
+    }
+
+    .logo_krom_header_index img{
+        width: 350px;
+        height: 324px;
+        top: 500px;
+    }
+
+    .reseaux_header{
+        text-align: center;
+        margin-left: 0;
+        top: 700px;
+        z-index: 1;
+    }
+
+    .reseaux_header img{
+        width: 60px;
+    }
+
+
+
+
+    /*------------------------index.php----------------------*/
+    .img_header_pc{
+        display: inline-block;
+    }
+
+    .img_header_mobile{
+        display: none;
+    }
+
+    .quelques_chiffres_global{
+        padding: 12rem 0;
+    }
+
+    .quelques_chiffres{
+        font-size: 120%;
+    }
+
+    .date_article_index{
+        display: flex;
+        margin-bottom: 5rem;
+        font-size: 50%;
+        color: rgba(130, 130, 130, 1);
+        margin-left: 50rem;
+    }
+
+    .barre_chiffres{
+        height: 100px;
+    }
+
+
+
+    /*-------------------actualites.php--------------------*/
+    .article_complet{
+        padding: 0 10rem;
+    }
+
+    .auteur_article{
+        font-size: 45%;
+    }
+
+    .texte_article{
+        font-size: 70%;
+    }
+
+    .article_complet figcaption{
+        font-size: 50%;
+    }
+
+    .collec_article{
+        margin-left: 5rem;
+    }
+
+    .collec_article_index{
+        margin-left: 0;
+    }
+
+
+
+    /*------------------calendrier.php----------------------*/
+    .calendrier{
+        margin-top: 10rem;
+        padding: 0 5rem;
+    }
+
+    .un_calendrier{
+        margin: 0 55rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .date_calendrier{
+        padding: 0;
+    }
+
+    .intitule_calendrier a{
+        padding: 0;
+    }
+
+    .separation_calendrier{
+        margin: 5rem 55rem;
+    }
+
+
+    /*--------------------equipe.php-----------------------*/
+    .equipe_flex{
+        flex-direction: row;
+    }
+
+    .collec_membres{
+        margin-inline: 2rem;
+    }
+
+    .collec_membres img{
+        width: 243px;
+        height: 300px;
+    }
+
+
+
+
+    .detail_pilote{
+        display: flex;
+        justify-content: center;
+    }
+
+    .photo_pilote{
+        justify-content: center;
+        padding-right: 20rem;
+    }
+
+    .fiche_pilote{
+        margin-top: 27rem;
+        justify-content: center;
+        padding-left: 10rem;
+    }
+
+    .fiche_pilote a{
+        font-size: 2.25rem;
+    }
+
+    .liste_pilote{
+        font-size: 2.25rem;
+    }
+
+    .reseaux_pilotes img{
+        width: 50px;
+        height: 50px;
+        color: black;
+    }
+
+    .redirection_liste_equipe{
+        margin: 10rem 10rem;
+    }
+
+
+
+    /*----------------------a-propos.php-----------------------*/
+    .texte_info{
+        padding: 0 10rem;
+        margin-top: 10rem;
+    }
+
+    .h2_sous_nav_politique_confidentialite{
+        margin-bottom: 5rem;
+    }
+
+    .texte_mentions_legales{
+        padding: 0 10rem;
+    }
+
+    .sous_titre{
+        padding: 2rem 10rem;
+    }
+
+    .liste_politique_confidentialite{
+        padding: 0 10rem;
+    }
+
+
+
+    /*----------------------Footer------------------------*/
+    footer{
+        font-size: 150%;
+    }
+
+    .separation_footer{
+        border: 1px solid rgba(222, 254, 54, 1);
+        margin: 10rem 10rem;
+    }
+
+    .footer_flex{
+        display: flex;
+    }
+
+    .logo_krom_footer{
+        width: 240px;
+        height: 222px;
+    }
+
+    .reseaux_footer img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .redirection_footer{
+        font-size: 70%;
+    }
+
+    .redirection_footer h4{
+        margin-bottom: 5rem;
+    }
+
+    .redirection_footer h4:last-of-type{
+        margin-bottom: 0rem;
+    }
+
+    .mentions_footer{
+        margin-top: 0;
+        font-size: 40%;
+    }
+
+
+    /*Positionnement flex */
+    footer .logos_footer{
+        width: 33%;
+        height: 33%;
+        justify-content: center;
+    }
+
+    footer .timeline_twitter{
+        display: inline-block;
+        width: 33%;
+        height: 33%;
+    }
+
+    footer .links_footer{
+        width: 33%;
+        height: 33%;
+        margin: auto;
+        text-align: center;
+    }
+
+
+
+
+    /*--------------------Transitions---------------------*/
+    .header_index a{
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+    .header_index a:hover{
+        color: rgba(222, 254, 54, 1);
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+    .header_global a{
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+    .header_global a:hover{
+        color: rgba(222, 254, 54, 1);
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+
+    .redirection_vue_article a{
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+    .redirection_vue_article a:hover{
+        background-color: black;
+        color: rgba(222, 254, 54, 1);
+        border: 1px solid rgba(222, 254, 54, 1);
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+
+    .bouton_actu a{
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+    .bouton_actu a:hover{
+        background-color: black;
+        color: rgba(222, 254, 54, 1);
+        border: 1px solid rgba(222, 254, 54, 1);
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+
+    .redirection_footer a{
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+    .redirection_footer a:hover{
+        color: rgba(222, 254, 54, 1);
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+
+    .intitule_calendrier a{
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+    .intitule_calendrier a:hover{
+        color: rgba(222, 254, 54, 1);
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+
+    .bouton button{
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+    .bouton button:hover{
+        background-color: black;
+        color: rgba(222, 254, 54, 1);
+        border: 3px solid rgba(222, 254, 54, 1);
+        -webkit-transition: all 0.25s ease-in-out;
+    }
+
+    .article_complet img{
+        -webkit-transition: all 0.5s ease-in-out;
+    }
+
+    .article_complet img:hover{
+        width: 920px;
+        height: 518px;
+        -webkit-transition: all 0.5s ease-in-out;
+    }
+}

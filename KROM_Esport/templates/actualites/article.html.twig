@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KROM Esport - Actualités{% endblock %}
+
+{% block meta %}
+    <meta property="og:site_name" content="KROM Esport" />
+    <meta property="og:title" content="{{ actualites.titre }}" />
+    <meta property="og:description" content="{{ actualites.texte }}" />
+    <meta name="description" content="{{ actualites.texte }}" />
+    <meta property="og:image" content="https://krom-esport.fr/img/article/{{ actualites.imgCouverture }}" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+
+    <meta name="twitter:title" content="KROM Esport" />
+    <meta name="twitter:image" content="https://krom-esport.fr/img/article/{{ actualites.imgCouverture }}" />
+    <meta name="twitter:description" content="{{ actualites.texte }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="noarchive" />
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML pour afficher un article -->
+
+    <div class="article_complet">
+        <h2 class="titre_article_complet">{{ actualites.titre }}</h2>
+        <!-- Utilisation de l'extension Twig "format_datetime" pour afficher la date au format français. -->
+        <p class="auteur_article">Par {{ actualites.auteur }} , le {{ actualites.dateParution|format_datetime(locale='fr',pattern="dd MMMM YYYY") }}.</p>
+        <!-- Utilisation de l'extension Twig "raw" pour prendre en compte les balises du type <strong>, <br>, etc... -->
+        <p class="texte_article">{{ actualites.texte|raw }}</p>
+        <p>{{ actualites.video|raw }}</p>
+        <a class="redirection_liste_article" href="{{ path('actualites_index') }}">← Retourner à la liste</a>
+    </div>
+{% endblock %}

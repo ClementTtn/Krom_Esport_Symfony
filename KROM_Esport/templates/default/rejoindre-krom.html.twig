@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KROM Esport - Rejoindre KROM{% endblock %}
+
+{% block meta %}
+    <meta property="og:site_name" content="KROM Esport" />
+    <meta property="og:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta property="og:title" content="Rejoindre KROM Esport" />
+    <meta property="og:description" content="Vous souhaitez rejoindre notre structure ? Postulez ici." />
+    <meta name="description" content="Vous souhaitez rejoindre notre structure ? Postulez ici." />
+
+    <meta name="twitter:title" content="KROM Esport" />
+    <meta name="twitter:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta name="twitter:description" content="Vous souhaitez rejoindre notre structure ? Postulez ici." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="noarchive" />
+{% endblock %}
+
+
+{% block body %}
+    <!-- Page HTML pour le formulaire de candidature -->
+
+    <main>
+        <h2 class="h2_sous_nav_politique_confidentialite">Rejoindre KROM Esport</h2>
+        <p class="texte_mentions_legales">
+            Vous souhaitez courir au sein d'une structure, sous de nouvelles couleurs, évoluer en équipe ? Vous êtes au bon endroit.
+            <br>
+            La seule condition ? Avoir 18 ans.
+            <br>
+            <br>
+            Pour nous faire parvenir votre candidature, remplissez ce formulaire. Vous recevrez un mail confirmant l'envoi de votre candidature sur l'adresse renseignée.
+            <br>
+            Nous vous contacterons sur cette même adresse mail afin de convenir d'un rendez-vous pour un entretien.
+            <br>
+            <br>
+            Pour toute autre question, contactez-nous sur ce <a href="{{ path('contact') }}">formulaire</a>.
+        </p>
+
+        <br>
+        <br>
+
+        <div class="formulaire">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <p class="bouton">
+                <button type="submit">Envoyer</button>
+            </p>
+            {{ form_end(form) }}
+        </div>
+
+
+    </main>
+{% endblock %}

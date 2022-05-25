@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KROM Esport - Contact{% endblock %}
+
+{% block meta %}
+    <meta property="og:site_name" content="KROM Esport" />
+    <meta property="og:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta property="og:title" content="Contacter KROM Esport" />
+    <meta property="og:description" content="Une question, une remarque ? Contactez-nous." />
+    <meta name="description" content="Une question, une remarque ? Contactez-nous." />
+
+    <meta name="twitter:title" content="KROM Esport" />
+    <meta name="twitter:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta name="twitter:description" content="Une question, une remarque ? Contactez-nous." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="noarchive" />
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML pour le formulaire de contact -->
+
+    <h2 class="h2_sous_nav">Nous contacter</h2>
+    <p class="texte_contact">
+        Une question, une demande particulière ? <br><br>
+        Remplissez le formulaire ci-dessous.
+    </p>
+
+    <div class="formulaire">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <p class="bouton">
+            <button type="submit">Envoyer</button>
+        </p>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

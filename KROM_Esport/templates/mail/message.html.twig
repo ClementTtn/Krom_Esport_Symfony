@@ -1,0 +1,78 @@
+{% apply inline_css %}
+    {# CSS #}
+    <style>
+
+        .image{
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        img{
+            width: 300px;
+            height: 44px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .separation{
+            text-align: center;
+        }
+
+        .message{
+            color: rgba(113,113,113,1);
+        }
+
+        .message_automatique{
+            font-size: 0.75rem;
+        }
+    </style>
+
+
+    {# HTML #}
+    <!-- Page HTML pour la mise en page du mail de confirmation d'envoi du message  -->
+    <p class="image">
+        <a href="https://krom-esport.fr">
+            <img src="{{ email.image('@images/logos/krom_logo_noir_couleur.png') }}" alt="Logo">
+        </a>
+    </p>
+
+    <p>
+        Bonjour,
+        <br>
+        Nous avons bien reçu votre message depuis notre formulaire de contact sur le site KROM Esport.
+        <br>
+        Vous trouverez ci-dessous une copie de votre message. Nous vous répondrons dans les plus brefs délais.
+        <br>
+        <br>
+        À très bientôt,
+        <br>
+        L'équipe de KROM Esport.
+    </p>
+
+    <br>
+    <br>
+
+    <p class="separation">
+        -----------------------------
+    </p>
+
+    <br>
+    <br>
+
+    <p class="message">
+        "{{ message }}"
+    </p>
+
+    <br>
+    <br>
+
+    <p class="message_automatique">
+        Ceci est un message automatique. Si votre message est incomplet, vous pouvez nous tramsmettre la suite en répondant à ce message.
+    </p>
+
+{% endapply %}

@@ -1,0 +1,25 @@
+:root{
+  /* Liens dashboard */
+  --link-color: black;
+  --link-hover-color: rgba(205, 235, 49, 1);
+
+  /* Bouton image par ex */
+  --button-bg: rgba(222, 254, 54, 1);
+
+  /* Bouton create and add par ex */
+  --button-color: black;
+
+  /* Bouton Add ... */
+  --button-primary-bg: rgba(222, 254, 54, 1);
+  --button-primary-color: black;
+
+  /* Bouton Create and add another */
+  --button-secondary-bg: rgba(222, 254, 54, 1);
+  --button-secondary-color: black;
+
+  /* Page en dessous du tableau */
+  --pagination-active-bg: rgba(222, 254, 54, 1);
+  --pagination-active-color: black;
+
+
+}

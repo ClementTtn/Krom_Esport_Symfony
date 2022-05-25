@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KROM Esport - Equipe{% endblock %}
+
+{% block meta %}
+    <meta property="og:site_name" content="KROM Esport" />
+    <meta property="og:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta property="og:title" content="L'équipe KROM Esport" />
+    <meta property="og:description" content="{{ equipe.nom }}" />
+    <meta name="description" content="Découvrez-en un peu plus sur {{ equipe.nom }}." />
+
+    <meta name="twitter:title" content="KROM Esport" />
+    <meta name="twitter:image" content="https://www.krom-esport.fr/img/logos/krom_logo_fond_noir.png" />
+    <meta name="twitter:description" content="Découvrez-en un peu plus sur {{ equipe.nom }}." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="noarchive" />
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML qui affiche un membre de l'équipe  -->
+
+    <div class="detail_pilote">
+
+        <div class="photo_pilote">
+            <img src="/img/equipe/{{ asset(equipe.img) }}" alt="membre_krom">
+            <p class="nom_pilote">{{ equipe.nom }}</p>
+            <p class="role_pilote">{{ equipe.role }}</p>
+            <p class="age_pilote">{{ equipe.age }} ans, {{ equipe.ville }}</p>
+        </div>
+
+        <div class="fiche_pilote">
+            <p class="texte_pilote">{{ equipe.circuit|raw }}</p>
+
+            <p class="texte_pilote">{{ equipe.voiture|raw }}</p>
+
+            <p class="texte_pilote">{{ equipe.palmares|raw }}</p>
+
+            <p class="reseaux_pilotes">{{ equipe.lien|raw }}</p>
+        </div>
+
+    </div>
+
+    <a class="redirection_liste_equipe" href="{{ path('equipe_index') }}">← Retourner à la liste</a>
+{% endblock %}
