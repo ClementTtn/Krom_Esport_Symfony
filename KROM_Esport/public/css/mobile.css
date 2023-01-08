@@ -465,7 +465,7 @@ iframe{
     display: flex;
     margin: auto;
     text-align: center;
-    width: 304px;
+    width: 282px;
     height: 376px;
 }
 
@@ -490,8 +490,8 @@ iframe{
     display: flex;
     margin: auto;
     text-align: center;
-    width: 304px;
-    height: 376px;
+    width: 375px;
+    height: 500px;
     color: white;
 }
 
@@ -629,6 +629,16 @@ iframe{
 }
 
 
+/*---------------------Error 404----------------------*/
+.error_404_parent{
+    margin: 20rem 0;
+    font-size: 85%;
+    text-align: center;
+}
+
+.error_404_fils:first-child{
+    margin-bottom: 7rem;
+}
 
 
 /*----------------------Footer------------------------*/
