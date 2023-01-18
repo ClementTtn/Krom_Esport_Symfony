@@ -16,3 +16,28 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scroll');
     }
 })
+
+
+const carousel = ["img/header/carousel/911_RSR_shooting_13.webp", "img/header/carousel/BMW_M_Hybrid_6.webp", "img/header/carousel/M4GT3_2209222258.webp", "img/header/carousel/VRC_Spa_1.webp"];
+let num = 0;
+const img = document.getElementById("img_header_pc");
+const background = document.getElementById("background_header_index");
+
+function ChangeSlide() {
+    console.log(navigator.userAgent);
+
+    if (navigator.userAgent.includes("Firefox")){}
+
+    else{
+        num = num + 1;
+        if (num < 0)
+            num = carousel.length - 1;
+        if (num > 3)
+            num = 0;
+
+        img.src = carousel[num];
+        background.style.backgroundImage = 'url(' + carousel[num] + ')';
+    }
+}
+
+setInterval("ChangeSlide()", 5000);

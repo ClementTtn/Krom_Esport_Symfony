@@ -58,7 +58,7 @@ header a{
     margin-top: 11rem;
 }
 
-.img_header_pc{
+#img_header_pc{
     display: none;
 }
 
@@ -264,6 +264,9 @@ a{
 }
 
 
+.carousel{
+    display: none;
+}
 
 
 /*------------------actualites-liste.php--------------------*/

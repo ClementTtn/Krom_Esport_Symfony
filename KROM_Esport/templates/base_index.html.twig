@@ -33,7 +33,7 @@
 
     <body>
 
-    <div class="background_header_index">
+    <div id="background_header_index" style='background-image: url("../img/header/carousel/911_RSR_shooting_13.webp");'>
         <div class="logo_krom_header_index">
             <img src="{{ asset('img/logos/krom_logo.png') }}" alt="KROM Esport">
         </div>
@@ -55,7 +55,7 @@
 
 
         <div class="img_header">
-            <img class="img_header_pc" src="{{ asset('img/header/img_header.png') }}" alt="krom_header" height="1080" width="1920">
+            <img src="{{ asset('img/header/carousel/911_RSR_shooting_13.webp') }}" alt="krom_header" height="1080" width="1920" id="img_header_pc">
             <img class="img_header_mobile" src="{{ asset('img/header/img_header_mobile.png') }}" alt="krom_header">
         </div>
 
@@ -92,6 +92,13 @@
                 </ul>
             </nav>
         </header>
+    </div>
+
+    <div class="carousel">
+        <img src="{{ asset('img/header/carousel/911_RSR_shooting_13.webp') }}" defer>
+        <img src="{{ asset('img/header/carousel/BMW_M_Hybrid_6.webp') }}" defer>
+        <img src="{{ asset('img/header/carousel/M4GT3_2209222258.webp') }}" defer>
+        <img src="{{ asset('img/header/carousel/VRC_Spa_1.webp') }}" defer>
     </div>
 
     {% block body %}
