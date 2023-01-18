@@ -24,8 +24,6 @@ const img = document.getElementById("img_header_pc");
 const background = document.getElementById("background_header_index");
 
 function ChangeSlide() {
-    console.log(navigator.userAgent);
-
     if (navigator.userAgent.includes("Firefox")){}
 
     else{
@@ -41,3 +39,16 @@ function ChangeSlide() {
 }
 
 setInterval("ChangeSlide()", 5000);
+
+
+function deleteBackground(){
+    if("matchMedia" in window) {
+        if(window.matchMedia("(min-width:1000px)").matches) {}
+        else{
+            background.style.removeProperty('background-image');
+            console.log('Téléphone');
+        }
+    }
+}
+
+background.addEventListener("load", deleteBackground());
